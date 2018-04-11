@@ -1,0 +1,44 @@
+{
+    "name": "limesquare-nl/activecampaign",
+    "description": "Create and update Active Campaign contacts. This can be use for newsletter subscriptions, for example.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "active campaign"
+    ],
+    "support": {
+        "docs": "https://github.com/limesquare-nl/activecampaign/blob/master/README.md",
+        "issues": "https://github.com/limesquare-nl/activecampaign/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jurgen Krol",
+            "homepage": "https://limesquare.eu"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "activecampaign/api-php": "2.0.3"
+    },
+    "autoload": {
+        "psr-4": {
+          "limesquare\\activecampaign\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Active Campaign",
+        "handle": "activecampaign",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/limesquare-nl/activecampaign/master/CHANGELOG.md",
+        "components": {
+            "activeCampaignService": "limesquare\\activecampaign\\services\\ActivecampaignService"
+        },
+        "class": "limesquare\\activecampaign\\Activecampaign"
+    }
+}

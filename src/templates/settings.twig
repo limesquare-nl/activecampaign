@@ -1,0 +1,38 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Active Campaign Contacts plugin for Craft CMS 3.x
+ *
+ * Active Campaign Contacts Settings.twig
+ *
+ * @author    Jurgen Krol
+ * @copyright Copyright (c) 2018 Jurgen Krol
+ * @link      https://limesquare.eu
+ * @package   ActiveCampaignContacts
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("limesquare\\activecampaign\\assetbundles\\activecampaign\\ActivecampaignAsset") %}
+
+{{ forms.textField({
+    label: 'URL',
+    instructions: 'Your Active Campaign URL' | t,
+    id: 'acUrl',
+    name: 'acUrl',
+    value: settings.acUrl,
+    errors: settings.getErrors('acUrl')
+    })
+}}
+
+{{ forms.textField({
+    label: 'API Key',
+    instructions: 'You can find it in the settings of your Active Campaign account' | t,
+    id: 'acApikey',
+    name: 'acApikey',
+    value: settings.acApikey,
+    errors: settings.getErrors('acApikey')
+    })
+}}
