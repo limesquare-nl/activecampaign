@@ -2,7 +2,7 @@
     "name": "limesquare-nl/activecampaign",
     "description": "Create and update Active Campaign contacts. This can be use for newsletter subscriptions, for example.",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "keywords": [
         "craft",
         "cms",
