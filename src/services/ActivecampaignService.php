@@ -16,7 +16,7 @@ use limesquare\activecampaign\Activecampaign;
 use Craft;
 use craft\base\Component;
 
-use ActiveCampaign;
+use ActiveCampaign as ActiveCampaignSDK;
 
 /**
  * @author    Jurgen Krol
@@ -59,7 +59,7 @@ class ActivecampaignService extends Component
             }
         }
         
-        $ac = new ActiveCampaign($url, $apikey);
+        $ac = new ActiveCampaignSDK($url, $apikey);
         $ac->set_curl_timeout(10);
         $response = $ac->api("contact/sync", $post);
         
