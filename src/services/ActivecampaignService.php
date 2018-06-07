@@ -45,7 +45,9 @@ class ActivecampaignService extends Component
         $redirect = "/";
         
         foreach($data as $key => $post_value) {
-            if($key == "listid") {
+            if($key == "formid") {
+                $post['form'] = $post_value;
+            } elseif($key == "listid") {
                 $post['p[{' . $post_value . '}]'] = $post_value;
             } elseif($key == "field") {
                 foreach($post_value as $index => $field_value) {
